@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<form>
+    điểm toán:<input type="number" id="toan" name="number">
+    <br>
+    điểm văn:<input type="number" id="van" name="number">
+    <br>
+    điểm anh:<input type="number" id="anh" name="number">
+    <br>
+    <select id="kv">
+        <option value="">chọn khu vực</option>
+        <option value="0.75">khu vực 1</option>
+        <option value="0.5">khu vực 2</option>
+        <option value="0.25">khu vực 2 - nt</option>
+        <option value="0"> khu vực 3</option>
+
+    </select>
+    <span id="error"></span>
+    <br>
+    <button type="button" onclick="diem();">tính</button>
+
+</form>
+<script>
+    let kv = document.getElementById("kv");
+    let toan = document.getElementById("toan");
+    let van = document.getElementById("van");
+    let anh = document.getElementById("anh");
+    let error = document.getElementById("error");
+
+    function diem() {
+        let toanValue = parseFloat( toan.value) ;
+        let vanValue = parseFloat (van.value );
+        let anhValue = parseFloat (anh.value);
+        let kvValue = parseFloat(kv.value);
+        
+        let ketQua = toanValue+vanValue+anhValue+kvValue;
+        document.write( "điểm thi khối D  " + ketQua)
+    }
+
+
+</script>
+</html>
